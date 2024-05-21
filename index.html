@@ -6,18 +6,14 @@
     <title>WebAuthn Feature Checker</title>
   </head>
   <body>
-    <code><pre id="output"></pre></code>
+    <pre><code id="output"></code></pre>
     <script type="module">
       import { checkFeatures } from './featureCheck.js'
       (async () => {
         const features = await checkFeatures();
 
         // Output to page
-        document.getElementById("output").innerText = JSON.stringify(
-          features,
-          null,
-          2
-        );
+        document.getElementById("output").innerText = JSON.stringify(features, null, 2);
       })();
     </script>
   </body>
