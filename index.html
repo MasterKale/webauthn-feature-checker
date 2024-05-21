@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebAuthn Feature Analytics</title>
+  </head>
+  <body>
+    <code><pre id="output"></pre></code>
+    <script type="module">
+      import { checkFeatures } from './featureCheck.js'
+      (async () => {
+        const features = await checkFeatures();
+
+        // Output to page
+        document.getElementById("output").innerText = JSON.stringify(
+          features,
+          null,
+          2
+        );
+      })();
+    </script>
+  </body>
+</html>
